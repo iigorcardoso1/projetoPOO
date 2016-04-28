@@ -11,6 +11,9 @@ public class RepositorioUsuario {
 		this.usuarios = new Usuario[101];
 	}
 
+	
+	
+	
 	public void inserirUsuario(Usuario usu){
 		for(int i =0;i<this.usuarios.length;i++){
 			if(this.usuarios[i]==null){

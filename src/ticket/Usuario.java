@@ -25,6 +25,16 @@ public class Usuario {
 		this.sexo = sexo;
 	}
 
+	
+	
+
+	public String toString() {
+		return "Usuario \nNome=" + nome + "\nRua=" + rua + "\nCidade=" + cidade
+				+ "\nEstado=" + estado + "\nEmail=" + email + "\nCPF=" + cpf
+				+ "\nSenha=" + senha + "\nSexo=" + sexo;
+	}
+
+
 
 
 	public String getNome() {
