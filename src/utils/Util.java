@@ -2,22 +2,51 @@ package utils;
 
 import ticket.Usuario;
 import dados.RepositorioUsuario;
+import java.util.Scanner;
 
 public class Util {
 
+
+
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Usuario usu1 = new Usuario("Igor","doze","Recife","PE","igor@gmail.com","12345","123","Masc");
-		Usuario usu2 = null;
+		Scanner in = new Scanner(System.in);
 		RepositorioUsuario rep = new RepositorioUsuario();
 		
-		rep.inserirUsuario(usu1);
-		System.out.println(usu1.toString());
-	
-		rep.removerUsuario(usu2);
-		rep.buscarUsuario("12345");
-		
-		
+		while(true){
+			System.out.println("***** Meu Evento *****");
+			System.out.println("\n1-Login\n2-Cadastrar");
+			int opc;
+			opc = in.nextInt();
+			switch(opc){
+			case 1:
+				System.out.println("CPF: ");
+				String a = in.next();
+				break;
+			case 2:
+				Usuario usu = new Usuario();
+				rep.inserirUsuario(usu);
+				System.out.println("Nome: ");
+				usu.setNome(in.next());
+				System.out.println("Sexo: ");
+				usu.setSexo(in.next());
+				System.out.println("Rua: ");
+				usu.setRua(in.next());
+				System.out.println("Cidade: ");
+				usu.setCidade(in.next());
+				System.out.println("Estado: ");
+				usu.setEstado(in.next());
+				System.out.println("CPF: ");
+				usu.setCpf(in.next());
+				System.out.println("Email: ");
+				usu.setEmail(in.next());
+				System.out.println("Senha: ");
+				usu.setSenha(in.next());
+				break;
+			default:
+				System.out.println("Escolha aopção 1 ou 2");
+			}
+		}
 		
 		
 		

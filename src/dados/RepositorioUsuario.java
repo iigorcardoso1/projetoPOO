@@ -5,7 +5,7 @@ import ticket.Usuario;
 public class RepositorioUsuario {
 
 	private Usuario usuarios[];
-	int ult=-1;
+	static int ult=-1;
 	public RepositorioUsuario() {
 
 		this.usuarios = new Usuario[101];

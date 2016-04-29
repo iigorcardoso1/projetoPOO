@@ -12,6 +12,9 @@ public class Usuario {
 	private String sexo;
 	
 	
+	public Usuario(){
+		
+	}//Construtor Default
 	
 	public Usuario(String nome, String rua, String cidade, String estado,
 			String email, String cpf, String senha, String sexo) {
