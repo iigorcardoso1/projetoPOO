@@ -1,9 +1,10 @@
 package ticket;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class Eventos {
-	
+
 	private Ingresso ingressos[];
 	private String nome;
 	private String rua;
@@ -11,10 +12,11 @@ public class Eventos {
 	private String estado;
 	private String descricao;
 	private String hora;
-	private Date data;
-	
+	private String data;
+	private int id;
+
 	public Eventos(String nome, String rua, String cidade, String estado,
-			String descricao, String hora, Date data) {
+			String descricao, String hora, String data,int id) {
 		super();
 		this.nome = nome;
 		this.rua = rua;
@@ -23,6 +25,7 @@ public class Eventos {
 		this.descricao = descricao;
 		this.hora = hora;
 		this.data = data;
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -73,17 +76,40 @@ public class Eventos {
 		this.hora = hora;
 	}
 
-	public Date getData() {
+	public String getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(String data) {
 		this.data = data;
+	}
+
+	public Ingresso[] getIngressos() {
+		return ingressos;
+	}
+
+	public void setIngressos(Ingresso[] ingressos) {
+		this.ingressos = ingressos;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
+	public String toString() {
+		return "Eventos [nome=" + nome + ", rua=" + rua + ", cidade="
+				+ cidade + ", estado=" + estado + ", descricao=" + descricao + ", hora=" + hora + ", data=" + data
+				+ ", id=" + id + "]";
 	} 
-	
-	
-	
-	
-	
+
+
+
+
+
 
 }
