@@ -12,8 +12,21 @@ public class RepositorioUsuario {
 	}
 
 	
-	
-	
+
+	public void listarUsuarios(){
+		int c=-1;
+		for(int i=0;i<this.usuarios.length;i++){
+			if(this.usuarios[i]!=null){
+				System.out.println(this.usuarios[i].toString()+"\n");
+				break;
+				
+			}
+		}
+		if(c==-1){
+			System.out.println("Lista Vazia");
+		}
+	}
+
 	public void inserirUsuario(Usuario usu){
 		for(int i =0;i<this.usuarios.length;i++){
 			if(this.usuarios[i]==null){

@@ -12,16 +12,19 @@ public class Util {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		RepositorioUsuario rep = new RepositorioUsuario();
-		
-		while(true){
+		String opcao;	
+		do{
 			System.out.println("***** Meu Evento *****");
-			System.out.println("\n1-Login\n2-Cadastrar");
+			System.out.println("\n1-Login\n2-Cadastrar\n1");
 			int opc;
 			opc = in.nextInt();
 			switch(opc){
 			case 1:
 				System.out.println("CPF: ");
 				String a = in.next();
+				System.out.println("Senha: ");
+				String b = in.next();
+				
 				break;
 			case 2:
 				Usuario usu = new Usuario();
@@ -43,10 +46,13 @@ public class Util {
 				System.out.println("Senha: ");
 				usu.setSenha(in.next());
 				break;
+
 			default:
-				System.out.println("Escolha aopção 1 ou 2");
+				System.out.println("Escolha a opção 1 ou 2");
 			}
-		}
+			System.out.println("Voltar ao Menu? (s/n):");
+			opcao = in.next();
+		}while(opcao.equals("s"));
 		
 		
 		

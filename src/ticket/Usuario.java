@@ -31,14 +31,16 @@ public class Usuario {
 	
 	
 
+	
+
+
+
+
 	public String toString() {
-		return "Usuario \nNome=" + nome + "\nRua=" + rua + "\nCidade=" + cidade
-				+ "\nEstado=" + estado + "\nEmail=" + email + "\nCPF=" + cpf
-				+ "\nSenha=" + senha + "\nSexo=" + sexo;
+		return "Usuario [nome=" + nome + ", rua=" + rua + ", cidade=" + cidade
+				+ ", estado=" + estado + ", email=" + email + ", cpf=" + cpf
+				+ ", senha=" + senha + ", sexo=" + sexo + "]";
 	}
-
-
-
 
 	public String getNome() {
 		return nome;
