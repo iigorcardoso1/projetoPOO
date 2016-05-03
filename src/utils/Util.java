@@ -2,20 +2,22 @@ package utils;
 
 import ticket.Usuario;
 import dados.RepositorioUsuario;
+import controladores.ControladorUsuarios;
 import java.util.Scanner;
 
 public class Util {
 
 
 
-	
+
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		ControladorUsuarios repositorios = new ControladorUsuarios();
 		RepositorioUsuario rep = new RepositorioUsuario();
 		String opcao;	
 		do{
 			System.out.println("***** Meu Evento *****");
-			System.out.println("\n1-Login\n2-Cadastrar\n1");
+			System.out.println("\n1-Login\n2-Cadastrar\n");
 			int opc;
 			opc = in.nextInt();
 			switch(opc){
@@ -24,8 +26,11 @@ public class Util {
 				String a = in.next();
 				System.out.println("Senha: ");
 				String b = in.next();
+				repositorios.validarLogin(a, b);
+				
 				
 				break;
+				
 			case 2:
 				Usuario usu = new Usuario();
 				rep.inserirUsuario(usu);
@@ -45,6 +50,7 @@ public class Util {
 				usu.setEmail(in.next());
 				System.out.println("Senha: ");
 				usu.setSenha(in.next());
+				System.out.println(usu.toString());
 				break;
 
 			default:
@@ -52,12 +58,10 @@ public class Util {
 			}
 			System.out.println("Voltar ao Menu? (s/n):");
 			opcao = in.next();
+
 		}while(opcao.equals("s"));
-		
-		
-		
-		
-		
+
+
 	}
 
 }

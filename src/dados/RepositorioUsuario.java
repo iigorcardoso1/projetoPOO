@@ -11,20 +11,22 @@ public class RepositorioUsuario {
 		this.usuarios = new Usuario[101];
 	}
 
-	
 
-	public void listarUsuarios(){
-		int c=-1;
+
+	public boolean listarUsuarios(){
+		boolean c=false;
 		for(int i=0;i<this.usuarios.length;i++){
 			if(this.usuarios[i]!=null){
 				System.out.println(this.usuarios[i].toString()+"\n");
+			c=true;
 				break;
-				
+
 			}
 		}
-		if(c==-1){
+		if(c==false){
 			System.out.println("Lista Vazia");
 		}
+		return c;
 	}
 
 	public void inserirUsuario(Usuario usu){
@@ -49,9 +51,7 @@ public class RepositorioUsuario {
 				}
 			}
 		}
-		if(aux==null){
-			System.out.println("Usuario Inexistente");
-		}
+
 		return aux;
 	}//se tiver usuario retorna null
 
